@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover">
+<meta name="robots" content="index,follow">
+<title>利用規約｜SenMap</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="/assets/app.6e681212fc.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23C43357'/%3E%3Ctext x='32' y='45' font-size='40' font-family='Arial' font-weight='bold' fill='white' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
+<meta name="description" content="SenMap（美容外科専門医マップ）の利用規約。">
+<link rel="canonical" href="https://senmap.jp/terms/">
+<meta property="og:type" content="website"><meta property="og:site_name" content="SenMap"><meta property="og:title" content="利用規約｜SenMap"><meta property="og:description" content="SenMap（美容外科専門医マップ）の利用規約。"><meta property="og:url" content="https://senmap.jp/terms/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "利用規約", "url": "https://senmap.jp/terms/"}</script>
+</head>
+<body>
+<div id="map" aria-label="地図"></div>
+
+<div class="top" id="top">
+  <div class="hrow1"><span class="brand">SenMap</span><span class="tagline">美容外科専門医マップ</span><button class="hmenu" id="siteMenu">規約・ポリシー</button></div>
+  <div class="hrow2">
+    <label class="search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><input id="q" type="search" placeholder="医師名・クリニック・エリア" aria-label="キーワード検索" autocomplete="off"></label>
+    <button class="fbtn b2" id="openF"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></svg>絞り込み<span class="badge" id="fcount" hidden></span></button>
+  </div>
+  <div class="chips" id="chips"></div>
+</div>
+
+<div class="legend" id="legend" aria-label="ピンの色の説明"><span>掲載症例</span><span><i style="background:var(--rose)"></i>50件〜</span><span><i style="background:var(--rose-light)"></i>1〜49件</span><span><i style="background:var(--pin-none)"></i>不明</span></div>
+
+<button class="locate b2" id="locate" aria-label="現在地を表示"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/><circle cx="12" cy="12" r="8"/></svg></button>
+<button class="fab b2" id="toList"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M8 6h13M8 12h13M8 18h13M3.5 6h.01M3.5 12h.01M3.5 18h.01"/></svg><span id="fabtext"></span></button>
+
+<div class="sheet" id="sheet" hidden>
+  <div class="shead"><span class="cnt" id="count"></span><span class="r"><button class="sbtn b2" id="toFull">全画面で見る</button><button class="sbtn b2 x" id="closeSheet" aria-label="閉じる"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></span></div>
+  <div class="cards" id="cards"></div>
+</div>
+
+<div class="full" id="full" hidden>
+  <div class="nav"><span class="side"><button class="navbtn" id="fullBack"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg>地図</button></span><span class="t" id="fullTitle"></span><span class="side r"><button class="navbtn" id="fullFilter">絞り込み</button></span></div>
+  <div class="fbody" id="fullBody"></div>
+</div>
+
+<div class="banner" id="banner" aria-label="広告"><a class="bad" href="https://modelab.store/nikibi-ranking/?utm_source=senmap&amp;utm_medium=banner&amp;utm_campaign=phase1" target="_blank" rel="sponsored noopener"><img src="/assets/banner.f109dc6ad9.webp" alt="ニキビ治療の選び方 皮膚科の診療ガイドラインで比較" width="1280" height="400"><span class="lbl">広告</span></a></div>
+<div class="fpanel" id="fpanel" hidden><div class="fsheet" role="dialog" aria-label="絞り込み" id="fsheet"></div></div>
+<div class="detail" id="detail"><div class="dscroll"><article class="seo-doc"><h1>利用規約</h1><div class="rules">
+  <p>この利用規約（以下「本規約」）は、SenMap運営者（以下「運営者」）が提供する「SenMap」（以下「本サービス」）の利用条件を定めるものです。本サービスを利用した時点で、本規約に同意したものとみなします。</p>
+  <h4>第1条（本サービスの内容）</h4><ul><li>本サービスは、日本美容外科学会（JSAPS）の専門医の勤務先・資格・公式サイト掲載の症例数などの公開情報を地図上にまとめ、美容医療を検討する方の情報収集を支援するものです。</li><li>本サービスは医療機関の紹介・予約・診療を行うものではなく、学会・医療機関の公式サービスでもありません。</li></ul>
+  <h4>第2条（掲載情報）</h4><ul><li>掲載情報は、学会の公開名簿および各医療機関の公式サイトの記載をもとに運営者が作成したもので、記載の確認日時点のものです。</li><li>「公式サイト掲載の症例」は公式サイトに掲載された症例の件数であり、実際の手術件数や医療の質を示すものではありません。</li><li>医師・医療機関の方は、掲載内容の修正・掲載停止を運営者に依頼できます。運営者は内容を確認のうえ、速やかに修正または掲載停止を行います。</li></ul>
+  <h4>第3条（口コミの投稿）</h4><ul><li>口コミの投稿には、メールアドレスによる本人確認が必要です。</li><li>投稿者は、ご自身が実際に受診・施術を受けた体験のみを、「投稿ルール」に従って投稿するものとします。</li><li>投稿は運営者が投稿ルールに沿って確認したうえで掲載します。運営者が投稿の内容を書き換えたり、運営者の都合で非表示にしたりすることはありません。</li><li>投稿ルールの禁止事項に当たる投稿は掲載せず、その理由を投稿者にメールでお知らせします。掲載後に禁止事項に当たることが判明した場合も、同様にお知らせのうえ掲載を停止します。</li><li>法令にもとづく削除・開示の請求があった場合は、法令に従って対応します。</li></ul>
+  <h4>第4条（投稿の権利）</h4><ul><li>投稿の著作権は投稿者に帰属します。投稿者は運営者に対し、本サービスの提供・紹介のために投稿（文章・画像）を無償で利用（複製・公衆送信・表示に必要な範囲の縮小等を含む）することを許諾し、著作者人格権を行使しないものとします。</li><li>投稿者は、投稿する画像について必要な権利を有していること、第三者が写っていないことを保証するものとします。</li></ul>
+  <h4>第5条（禁止事項）</h4><ul><li>法令または公序良俗に反する行為</li><li>虚偽の投稿、なりすまし、受診していない医師・医療機関についての投稿</li><li>医療機関またはその関係者が、自院・他院の評価を目的として投稿する行為</li><li>医師・医療機関・他の利用者の名誉や信用を傷つける行為、個人を攻撃する行為</li><li>高評価・通報の機能を不正に繰り返し利用する行為</li><li>本サービスの情報を無断で大量に取得・転載する行為、運営を妨げる行為</li></ul>
+  <h4>第6条（広告）</h4><ul><li>本サービスには広告が表示されます。広告は掲載情報・口コミの内容や表示順とは関係なく、医師・医療機関から掲載料を受け取って情報の表示を有利にすることはありません。</li></ul>
+  <h4>第7条（サービスの変更・停止）</h4><ul><li>運営者は、事前の通知なく本サービスの内容を変更し、または提供を停止することがあります。</li></ul>
+  <h4>第8条（免責）</h4><ul><li>本サービスの利用に関する責任は「免責事項」に定めるとおりとします。</li></ul>
+  <h4>第9条（規約の変更）</h4><ul><li>運営者は、必要に応じて本規約を変更できます。変更後の規約は本サービス上に掲示した時点から効力を生じます。</li></ul>
+  <h4>第10条（準拠法・管轄）</h4><ul><li>本規約は日本法に準拠します。</li></ul>
+  <p class="sub">制定：2026年10月4日</p></div></article></div></div>
+<div class="fpanel" id="mpanel" hidden><div class="fsheet" role="dialog" id="msheet"></div></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>window.SITE={"base": "/", "title": "利用規約｜SenMap", "page": {"type": "legal", "key": "terms"}};</script>
+<script src="/assets/data.b858de4f37.js"></script>
+<script src="/assets/app.ccdca31f57.js"></script>
+</body>
+</html>
