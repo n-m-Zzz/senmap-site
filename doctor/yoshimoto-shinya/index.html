@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover">
+<meta name="robots" content="index,follow">
+<title>吉本 信也（総合南東北病院）｜美容外科専門医｜SenMap</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="/assets/app.6e681212fc.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23C43357'/%3E%3Ctext x='32' y='45' font-size='40' font-family='Arial' font-weight='bold' fill='white' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
+<meta name="description" content="吉本 信也医師（総合南東北病院・福島県郡山市）の資格・公式サイト掲載の症例数・口コミ。JSAPS（日本美容外科学会）専門医を地図で探せるSenMap。">
+<link rel="canonical" href="https://senmap.jp/doctor/yoshimoto-shinya/">
+<meta property="og:type" content="website"><meta property="og:site_name" content="SenMap"><meta property="og:title" content="吉本 信也（総合南東北病院）｜美容外科専門医｜SenMap"><meta property="og:description" content="吉本 信也医師（総合南東北病院・福島県郡山市）の資格・公式サイト掲載の症例数・口コミ。JSAPS（日本美容外科学会）専門医を地図で探せるSenMap。"><meta property="og:url" content="https://senmap.jp/doctor/yoshimoto-shinya/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Person", "name": "吉本 信也", "url": "https://senmap.jp/doctor/yoshimoto-shinya/", "jobTitle": "美容外科医", "hasCredential": [{"@type": "EducationalOccupationalCredential", "name": "JSAPS専門医"}, {"@type": "EducationalOccupationalCredential", "name": "形成外科専門医"}], "knowsAbout": [], "worksFor": {"@type": "MedicalClinic", "name": "総合南東北病院", "url": "https://www.minamitohoku.or.jp/", "address": {"@type": "PostalAddress", "streetAddress": "郡山市八山田七丁目115", "addressRegion": "福島県", "addressCountry": "JP"}, "geo": {"@type": "GeoCoordinates", "latitude": 37.42268, "longitude": 140.383636}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "SenMap", "item": "https://senmap.jp/"}, {"@type": "ListItem", "position": 2, "name": "福島県", "item": "https://senmap.jp/area/fukushima/"}, {"@type": "ListItem", "position": 3, "name": "吉本 信也", "item": "https://senmap.jp/doctor/yoshimoto-shinya/"}]}]}</script>
+</head>
+<body>
+<div id="map" aria-label="地図"></div>
+
+<div class="top" id="top">
+  <div class="hrow1"><span class="brand">SenMap</span><span class="tagline">美容外科専門医マップ</span><button class="hmenu" id="siteMenu">規約・ポリシー</button></div>
+  <div class="hrow2">
+    <label class="search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><input id="q" type="search" placeholder="医師名・クリニック・エリア" aria-label="キーワード検索" autocomplete="off"></label>
+    <button class="fbtn b2" id="openF"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></svg>絞り込み<span class="badge" id="fcount" hidden></span></button>
+  </div>
+  <div class="chips" id="chips"></div>
+</div>
+
+<div class="legend" id="legend" aria-label="ピンの色の説明"><span>掲載症例</span><span><i style="background:var(--rose)"></i>50件〜</span><span><i style="background:var(--rose-light)"></i>1〜49件</span><span><i style="background:var(--pin-none)"></i>不明</span></div>
+
+<button class="locate b2" id="locate" aria-label="現在地を表示"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/><circle cx="12" cy="12" r="8"/></svg></button>
+<button class="fab b2" id="toList"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M8 6h13M8 12h13M8 18h13M3.5 6h.01M3.5 12h.01M3.5 18h.01"/></svg><span id="fabtext"></span></button>
+
+<div class="sheet" id="sheet" hidden>
+  <div class="shead"><span class="cnt" id="count"></span><span class="r"><button class="sbtn b2" id="toFull">全画面で見る</button><button class="sbtn b2 x" id="closeSheet" aria-label="閉じる"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></span></div>
+  <div class="cards" id="cards"></div>
+</div>
+
+<div class="full" id="full" hidden>
+  <div class="nav"><span class="side"><button class="navbtn" id="fullBack"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg>地図</button></span><span class="t" id="fullTitle"></span><span class="side r"><button class="navbtn" id="fullFilter">絞り込み</button></span></div>
+  <div class="fbody" id="fullBody"></div>
+</div>
+
+<div class="banner" id="banner" aria-label="広告"><a class="bad" href="https://modelab.store/nikibi-ranking/?utm_source=senmap&amp;utm_medium=banner&amp;utm_campaign=phase1" target="_blank" rel="sponsored noopener"><img src="/assets/banner.f109dc6ad9.webp" alt="ニキビ治療の選び方 皮膚科の診療ガイドラインで比較" width="1280" height="400"><span class="lbl">広告</span></a></div>
+<div class="fpanel" id="fpanel" hidden><div class="fsheet" role="dialog" aria-label="絞り込み" id="fsheet"></div></div>
+<div class="detail" id="detail"><div class="dscroll"><article class="seo-doc"><h1>吉本 信也</h1><p>総合南東北病院　形成外科センターセンター長 / 口唇・口蓋・顔面修復センターセンター長</p><p>郡山市八山田七丁目115</p><p>資格：JSAPS専門医、形成外科専門医</p><p>得意分野：―</p><p>公式サイト掲載の症例：不明</p><p><a href="https://www.minamitohoku.or.jp/">総合南東北病院 公式サイト</a></p><nav class="seo-nav"><h2>都道府県から探す</h2><a href="/area/hokkaido/">北海道</a><a href="/area/iwate/">岩手県</a><a href="/area/miyagi/">宮城県</a><a href="/area/fukushima/">福島県</a><a href="/area/ibaraki/">茨城県</a><a href="/area/tochigi/">栃木県</a><a href="/area/gunma/">群馬県</a><a href="/area/saitama/">埼玉県</a><a href="/area/chiba/">千葉県</a><a href="/area/tokyo/">東京都</a><a href="/area/kanagawa/">神奈川県</a><a href="/area/toyama/">富山県</a><a href="/area/ishikawa/">石川県</a><a href="/area/nagano/">長野県</a><a href="/area/gifu/">岐阜県</a><a href="/area/shizuoka/">静岡県</a><a href="/area/aichi/">愛知県</a><a href="/area/mie/">三重県</a><a href="/area/kyoto/">京都府</a><a href="/area/osaka/">大阪府</a><a href="/area/hyogo/">兵庫県</a><a href="/area/hiroshima/">広島県</a><a href="/area/tokushima/">徳島県</a><a href="/area/kagawa/">香川県</a><a href="/area/ehime/">愛媛県</a><a href="/area/fukuoka/">福岡県</a><a href="/area/miyazaki/">宮崎県</a><a href="/area/okinawa/">沖縄県</a><h2>得意部位から探す</h2><a href="/specialty/eye/">目</a><a href="/specialty/nose/">鼻</a><a href="/specialty/mouth/">口</a><a href="/specialty/contour/">輪郭</a><a href="/specialty/skin/">肌治療</a></nav></article></div></div>
+<div class="fpanel" id="mpanel" hidden><div class="fsheet" role="dialog" id="msheet"></div></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>window.SITE={"base": "/", "title": "吉本 信也（総合南東北病院）｜美容外科専門医｜SenMap", "page": {"type": "doctor", "id": "1769207219"}};</script>
+<script src="/assets/data.b858de4f37.js"></script>
+<script src="/assets/app.ccdca31f57.js"></script>
+</body>
+</html>
